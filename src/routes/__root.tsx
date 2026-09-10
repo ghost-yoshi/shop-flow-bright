@@ -11,6 +11,11 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Ambiance } from "@/components/boutique/Ambiance";
+import { EnTete } from "@/components/boutique/EnTete";
+import { PiedDePage } from "@/components/boutique/PiedDePage";
+import { PanierProvider } from "@/lib/panier";
+import { ThemeProvider } from "@/lib/theme";
 
 function NotFoundComponent() {
   return (
@@ -120,8 +125,19 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <ThemeProvider>
+        <PanierProvider>
+          <div className="relative min-h-screen bg-background text-foreground">
+            <Ambiance />
+            <div className="relative mx-auto max-w-6xl px-5 md:px-8">
+              <EnTete />
+              {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+              <Outlet />
+              <PiedDePage />
+            </div>
+          </div>
+        </PanierProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }
