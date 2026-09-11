@@ -11,7 +11,7 @@ export const Route = createFileRoute("/artisans")({
       {
         name: "description",
         content:
-          "Rencontrez les ateliers qui fabriquent nos objets : céramistes, tisserands et tourneurs sur bois installés en France et en Europe.",
+          "Rencontrez les ateliers qui fabriquent nos objets : céramistes, tisserands et tourneurs sur bois installés à Douala et dans le Littoral.",
       },
       { property: "og:title", content: "Nos artisans — Marché Doux" },
       {
