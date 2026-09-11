@@ -99,7 +99,7 @@ function Panier() {
                 >
                   {l.nom}
                 </Link>
-                <p className="text-sm text-muted-foreground">{l.categorie}</p>
+                <p className="text-sm text-muted-foreground capitalize">{l.categorie}</p>
                 <button
                   type="button"
                   onClick={() => retirer(l.slug)}

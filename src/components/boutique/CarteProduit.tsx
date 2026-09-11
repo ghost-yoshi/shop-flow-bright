@@ -31,7 +31,7 @@ export function CarteProduit({ produit }: { produit: Produit }) {
               </Link>
             </h3>
             <p className="mt-0.5 text-sm text-muted-foreground">
-              {produit.artisan} · {produit.categorie}
+              {produit.artisan} · <span className="capitalize">{produit.categorie}</span>
             </p>
           </div>
           <span className="text-base font-semibold whitespace-nowrap">{prix(produit.prix)}</span>
