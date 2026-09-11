@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Céramique, textile, bois et lumière : une sélection d'objets faits main par des artisans indépendants, livrés partout en France.",
+          "Céramique, textile, bois et lumière : une sélection d'objets faits main par des artisans de Douala, livrés dans tout le Cameroun.",
       },
       { property: "og:title", content: "Marché Doux — objets artisanaux faits pour durer" },
       {
